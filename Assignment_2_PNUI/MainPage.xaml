@@ -43,28 +43,22 @@
             <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="Description:" Style="{StaticResource SampleHeaderTextStyle}"/>
                 <TextBlock Style="{StaticResource ScenarioDescriptionTextStyle}" TextWrapping="Wrap">
-                Using OCR API to extract text from loaded image file.
+                PNUI Assignment 2 Task 1 - Application to extract OCR text from image and speak loud. Detect faces on the given image and show result.
                 </TextBlock>
             </StackPanel>
 
             <ScrollViewer Grid.Row="1" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
                         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="User Language"/>
                         <ToggleSwitch VerticalAlignment="Center" Margin="20,0,0,0" x:Name="UserLanguageToggle" IsOn="False" Toggled="UserLanguageToggle_Toggled" />
                     </StackPanel>
                     <ComboBox Name="LanguageList" Width="200" DisplayMemberPath="DisplayName" Margin="0, 0, 0, 5" SelectionChanged="LanguageList_SelectionChanged" HorizontalAlignment="Left"/>
-                    <Grid x:Name="Image" Margin="0,0,0,5">
-                        <Canvas Name="PhotoCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,10,0,0" MaxWidth="600"/>
-                        <Image x:Name="PreviewImage" HorizontalAlignment="Left" VerticalAlignment="Top" SizeChanged="PreviewImage_SizeChanged" MaxWidth="600"/>
-                        <Grid x:Name="TextOverlay" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Grid x:Name="Image" Margin="0,0,0,5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Canvas Name="PhotoCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" SizeChanged="CanvasSize_Changed"/>
+                        <Grid x:Name="TextOverlay" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 5">
-                        <Button Name="SampleButton" Margin="0, 0, 5, 0" Tapped="SampleButton_Tapped">
-                            <Viewbox MaxHeight="40" MaxWidth="40">
-                                <SymbolIcon Symbol="Preview"/>
-                            </Viewbox>
-                        </Button>
                         <Button Name="LoadButton" Margin="0, 0, 5, 0" Tapped="LoadButton_Tapped">
                             <Viewbox MaxHeight="40" MaxWidth="40">
                                 <SymbolIcon Symbol="OpenFile"/>
@@ -73,6 +67,11 @@
                         <Button Name="ExtractButton" Margin="0, 0, 5, 0" Tapped="ExtractButton_Tapped">
                             <Viewbox MaxHeight="40" MaxWidth="40">
                                 <SymbolIcon Symbol="Character"/>
+                            </Viewbox>
+                        </Button>
+                        <Button Name="DetectFacesButton" Margin="0, 0, 5, 0" Tapped="DetectFacesButton_Tapped">
+                            <Viewbox MaxHeight="40" MaxWidth="40">
+                                <SymbolIcon Symbol="Emoji"/>
                             </Viewbox>
                         </Button>
                     </StackPanel>

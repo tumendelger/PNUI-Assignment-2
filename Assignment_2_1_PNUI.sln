@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 15
+# Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_2_PNUI", "Assignment_2_PNUI\Assignment_2_PNUI.csproj", "{01C123AA-F55D-4E79-BC24-282B8831E405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_2_1_PNUI", "Assignment_2_PNUI\Assignment_2_1_PNUI.csproj", "{01C123AA-F55D-4E79-BC24-282B8831E405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
